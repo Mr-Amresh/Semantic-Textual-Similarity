@@ -20,11 +20,12 @@ Response: {"similarity score": 0.2}
 ## 📂 Repository Structure
 | File              | Description                                      |
 |-------------------|--------------------------------------------------|
-| `main.py`         | STS model and FastAPI server (Parts A & B)       |
-| `part1.py`        | Standalone STS model with CSV processing (Part A)|
+| `Server_api_part2.py`         | STS model and FastAPI server (Parts A & B)       |
+| `Development_part1.py`        | Standalone STS model with CSV processing (Part A)|
 | `requirements.txt`| Python dependencies                              |
 | `Dockerfile`      | Container configuration for API deployment       |
 | `report.pdf`      | Report explaining the approach (compiled separately) |
+|testapi.py         | Using api to test usecases |
 
 
 ## 🛠️ Installation
@@ -65,13 +66,13 @@ Response: {"similarity score": 0.2}
 - **Preprocessing**: Normalizes text (lowercase, single spaces, retains `.,!?`).
 - **Similarity**: Computes cosine similarity between embeddings, clamped to [0, 1].
 - **Implementation**:
-  - `part1.py`: Processes `input.csv`, computes scores, and saves to `output.csv`.
-  - `main.py`: Integrates the model for API inference.
+  - `Development_part1.py`: Processes `input.csv`, computes scores, and saves to `output.csv`.
+  - `Server_api_part2.py`: Integrates the model for API inference.
 
 ### Usage
-Run `part1.py` to process a CSV file:
+Run `Development_part1.py` to process a CSV file:
 ```bash
-python part1.py
+python Development_part1.py
 ```
 **Output**:
 - Console: Similarity scores for each pair.
